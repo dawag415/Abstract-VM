@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 20:28:23 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/05 21:16:49 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/05 21:31:40 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 			break;
         try
 		{
-		    cmdInput.runLine(input);
+		    cmdStack.runLine(input);
 		}
 		catch (std::exception &e)
 		{
