@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 20:28:23 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/05 20:28:27 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/05 21:16:49 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int main(int argc, char **argv)
     std::ifstream fileInput;
     std::istream *cmdInput;
     int line = 1;
+    std::string input;
+
 
     if (argc > 2)
     {
@@ -43,13 +45,12 @@ int main(int argc, char **argv)
 	}
     while (cmdInput->eof())
     {
-        std::string input;
         std::getline(*cmdInput,input);
         if (!fromFile && std::regex_match(input, std::regex(";;.*")))
 			break;
         try
 		{
-		    cmdStack.runLine(input);
+		    cmdInput.runLine(input);
 		}
 		catch (std::exception &e)
 		{
