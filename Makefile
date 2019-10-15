@@ -2,7 +2,7 @@ export	CC	=	g++
 
 NAME		=	avm
 
-CFLAGS		=	-Wfatal-errors -Wall -Wextra -Werror 
+CFLAGS		=	-std=c++11 -Wfatal-errors -Wall -Wextra -Werror
 
 INC			=	-I includes
 
@@ -10,27 +10,32 @@ INC_DIR		=	includes/
 
 INC_FILES	=	avm.hpp\
 				CmdStack.hpp\
+				Operands.hpp\
 				IOperand.hpp\
 				Factory.hpp\
 				Int8.hpp\
 				Int16.hpp\
 				Int32.hpp\
 				Float.hpp\
-				Double.hpp
+				Double.hpp\
+				Calculations.hpp\
+				Errors.hpp
 
 INC_SRC		=	$(addprefix $(INC_DIR), $(INC_FILES))
 
-SRC_DIR		=	srcs/
+SRC_DIR		=	source/
 
 FILES		=	main.cpp\
 				CmdStack.cpp\
-				IOperand.cpp\
+				Operands.cpp\
 				Factory.cpp\
 				Int8.cpp\
 				Int16.cpp\
 				Int32.cpp\
 				Float.cpp\
-				Double.cpp
+				Double.cpp\
+				Calculations.cpp\
+				Errors.cpp
 
 SRC			=	$(addprefix $(SRC_DIR), $(FILES))
 
