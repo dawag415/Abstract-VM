@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 13:36:17 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 15:51:24 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 21:01:59 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ IOperand const * Double::operator+( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Add(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	std::size_t found = res.find(".");
     if(found == std::string::npos)
 		res.append(".0");
@@ -68,7 +68,7 @@ IOperand const * Double::operator-( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Sub(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	std::size_t found = res.find(".");
     if(found == std::string::npos)
 		res.append(".0");
@@ -84,7 +84,7 @@ IOperand const * Double::operator*( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Mul(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	std::size_t found = res.find(".");
     if(found == std::string::npos)
 		res.append(".0");
@@ -100,7 +100,7 @@ IOperand const * Double::operator/( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Div(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	std::size_t found = res.find(".");
     if(found == std::string::npos)
 		res.append(".0");
@@ -116,7 +116,7 @@ IOperand const * Double::operator%( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Mod(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	std::size_t found = res.find(".");
     if(found == std::string::npos)
 		res.append(".0");

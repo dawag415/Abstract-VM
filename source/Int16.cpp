@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 13:38:24 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 15:51:18 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 21:02:16 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ IOperand const * Int16::operator+( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Add(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	return g_Global::factory.createOperand(opType, res);
 }
 
@@ -66,7 +66,7 @@ IOperand const * Int16::operator-( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Sub(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	return g_Global::factory.createOperand(opType, res);
 }
 
@@ -79,7 +79,7 @@ IOperand const * Int16::operator*( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Mul(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	return g_Global::factory.createOperand(opType, res);
 }
 
@@ -92,7 +92,7 @@ IOperand const * Int16::operator/( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Div(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	return g_Global::factory.createOperand(opType, res);
 }
 
@@ -105,7 +105,7 @@ IOperand const * Int16::operator%( IOperand const &rhs ) const
 	else
 		opType = this->getType();
 	std::string res = Calculations::Mod(this->toString(), rhs.toString());
-	Calculations::checkRange(res, opType);
+	Calculations::outOfBounds(res, opType);
 	return g_Global::factory.createOperand(opType, res);
 }
 

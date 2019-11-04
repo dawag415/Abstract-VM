@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 17:24:38 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 15:51:37 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 22:32:38 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,14 @@ class	Errors
 		class OutOfBoundsException16 : public std::exception
 		{
 			public:
-				virtual const char	*what() const throw();
+			virtual	const char	*what() const throw();
 		};
 		class OutOfBoundsException32 : public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
+		class OverUnderException : public std::exception
 		{
 			public:
 				virtual const char	*what() const throw();

@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/01 20:28:23 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 16:38:02 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 22:40:35 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int main(int argc, char **argv)
 		{
 		    noError = false;
 			g_Global::errorOutput << "ERROR - Line " << line << ": " << e.what() <<
-            "Please correct instruction and try again.\nInstruction entered line "<<
+            "Please correct error and try again.\nInstruction entered line "<<
             line << ": \"" << input << "\" \n\n";
 		}
 		line++;

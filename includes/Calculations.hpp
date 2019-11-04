@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 13:35:42 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 15:51:41 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 21:02:01 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ namespace	Calculations
 	std::string	Div(std::string lhs, std::string rhs);
 	std::string	Mod(std::string lhs, std::string rhs);
 
-	void checkRange(std::string s, eOperandType opType);
+	void outOfBounds(std::string s, eOperandType opType);
 }
 
 #endif

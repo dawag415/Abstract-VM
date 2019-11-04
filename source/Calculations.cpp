@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 14:03:54 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 16:50:50 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 21:02:11 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ std::string	Calculations::Mod(std::string lhs, std::string rhs)
 	return (ret.str());
 }
 
-void	Calculations::checkRange(std::string s, eOperandType opType)
+void	Calculations::outOfBounds(std::string s, eOperandType opType)
 {
 	long int x = atol(s.data());
 	if (opType == Int8 && (x > CHAR_MAX || x < CHAR_MIN))

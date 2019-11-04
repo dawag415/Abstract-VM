@@ -1,0 +1,7 @@
+push int16(30000)
+push int16(2767)
+add
+push int16(1)
+add
+dump
+exit

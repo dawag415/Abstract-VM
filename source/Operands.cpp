@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 13:38:43 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 16:50:57 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 22:34:36 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	Operands::add(void)
 	{
 		delete rhs;
 		delete lhs;
-		throw e;
+		throw OverUnderException();
 	}
 }
 
@@ -110,7 +110,7 @@ void	Operands::sub(void)
 	{
 		delete rhs;
 		delete lhs;
-		throw e;
+		throw OverUnderException();
 	}
 }
 
@@ -133,7 +133,7 @@ void	Operands::mul(void)
 	{
 		delete rhs;
 		delete lhs;
-		throw e;
+		throw OverUnderException();
 	}
 }
 

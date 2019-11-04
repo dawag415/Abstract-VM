@@ -6,7 +6,7 @@
 /*   By: iwagner <iwagner@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/05 17:24:48 by iwagner           #+#    #+#             */
-/*   Updated: 2019/10/14 15:51:23 by iwagner          ###   ########.fr       */
+/*   Updated: 2019/10/14 22:32:50 by iwagner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ const char	*Errors::BadSyntaxException::what() const throw()
 }
 const char	*Errors::OutOfBoundsException::what() const throw()
 {
-	return ("Value is out of bounds for type. Only enter values in the proper range for the specific type. \n");
+	return ("Value is out of bounds for type.\nOnly enter values in the proper range for the specific type.\n");
 }
 const char	*Errors::OutOfBoundsException8::what() const throw()
 {
@@ -31,6 +31,10 @@ const char	*Errors::OutOfBoundsException16::what() const throw()
 const char	*Errors::OutOfBoundsException32::what() const throw()
 {
 	return ("Value is out of bounds for type INT32. Only enter values in the proper range for INT32. \n");
+}
+const char	*Errors::OverUnderException::what() const throw()
+{
+	return ("OVERFLOW or UNDERFLOW due to arithmatic instruction.\n");
 }
 const char	*Errors::EmptyStackException::what() const throw()
 {

@@ -1,0 +1,14 @@
+push float(3.0)
+push float(1.0)
+div
+push float(0.0)
+push int32(6)
+dump
+pop
+;div
+push int16(5)
+;push int16(999999999999999999999999999)
+add
+dump
+print
+exit
